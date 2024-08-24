@@ -1,6 +1,9 @@
 // comment component to add, edit, delete comments
 
 import { useState } from "react";
+import { Input } from "./ui/input";
+import { Button } from "./ui/button";
+import { Textarea } from "./ui/textarea";
 type CommentType = {
     comment: string;
     fileUrl?: string;
@@ -34,20 +37,20 @@ const Comment = ({ comment }: CommentProps) => {
                             Download File
                         </a>
                     )}
-                    <button onClick={() => setMode("edit")}>Edit</button>
+                    <Button onClick={() => setMode("edit")}>Edit</Button>
                 </div>
             ) : (
                 <div>
-                    <textarea value={localComment.comment} onChange={(e) => {
+                    <Textarea value={localComment.comment} onChange={(e) => {
                         setLocalComment({ ...comment, comment: e.target.value });
                     }} />
-                    <input type="file" onChange={(e) => {
+                    <Input type="file" onChange={(e) => {
                         const file = e.target.files ? e.target.files[0] : null;
                         if (file) {
                             setLocalComment({ ...comment, file });
                         }
                     }} />
-                    <button onClick={handleCommentSave}>Save</button>
+                    <Button onClick={handleCommentSave}>Save</Button>
                 </div>
             )}
         </div>
