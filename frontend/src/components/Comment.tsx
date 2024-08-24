@@ -9,15 +9,17 @@ type CommentType = {
 };
 type CommentProps = {
     comment: CommentType;
-    mode: "view" | "edit";
 };
 
-const Comment = ({ comment, mode }: CommentProps) => {
+const Comment = ({ comment }: CommentProps) => {
 
     const [localComment, setLocalComment] = useState<CommentType>(comment);
+    const [mode, setMode] = useState<"view" | "edit">("view");
 
     const handleCommentSave = () => {
-        // save comment
+        // Save the comment
+        console.log(localComment);
+        setMode("view");
     }
     return (
         <div>
@@ -32,6 +34,7 @@ const Comment = ({ comment, mode }: CommentProps) => {
                             Download File
                         </a>
                     )}
+                    <button onClick={() => setMode("edit")}>Edit</button>
                 </div>
             ) : (
                 <div>

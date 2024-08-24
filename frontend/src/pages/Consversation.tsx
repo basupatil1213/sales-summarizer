@@ -17,7 +17,7 @@ const Consversation = ({ transcript, comments }: ConversationProps) => {
             <Display transcript={transcript} />
             <h1>Comments</h1>
             {comments.map((comment, index) => (
-                <Comment key={index} comment={comment} mode="edit" />
+                <Comment key={index} comment={comment} />
             ))}
         </div>
     );
