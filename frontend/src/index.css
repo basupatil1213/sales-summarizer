@@ -1,16 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --border: 210, 50%, 50%;
+  --input: 210, 50%, 50%;
+  --ring: 210, 50%, 50%;
+  --background: 210, 50%, 50%;
+  --foreground: 210, 50%, 50%;
+  --primary: 210, 50%, 50%;
+  --primary-foreground: 210, 50%, 50%;
+  --secondary: 210, 50%, 50%;
+  --secondary-foreground: 210, 50%, 50%;
+  --success: 120, 50%, 50%;
+  --success-foreground: 120, 50%, 50%;
+  --destructive: 0, 50%, 50%;
+  --destructive-foreground: 0, 50%, 50%;
+  --muted: 210, 50%, 50%;
+  --muted-foreground: 210, 50%, 50%;
+  --accent: 210, 50%, 50%;
+  --accent-foreground: 210, 50%, 50%;
+  --popover: 210, 50%, 50%;
+  --popover-foreground: 210, 50%, 50%;
+  --card: 210, 50%, 50%;
+  --card-foreground: 210, 50%, 50%;
+  --radius: 8px;
+  --radix-accordion-content-height: 100px;
 }
 
 a {
@@ -54,10 +83,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #000000;
   }
   a:hover {
     color: #747bff;

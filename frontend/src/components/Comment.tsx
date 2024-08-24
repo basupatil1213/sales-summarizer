@@ -37,7 +37,7 @@ const Comment = ({ comment }: CommentProps) => {
                             Download File
                         </a>
                     )}
-                    <Button onClick={() => setMode("edit")}>Edit</Button>
+                    <Button variant={"secondary"} onClick={() => setMode("edit")}>Edit</Button>
                 </div>
             ) : (
                 <div>
@@ -50,7 +50,7 @@ const Comment = ({ comment }: CommentProps) => {
                             setLocalComment({ ...comment, file });
                         }
                     }} />
-                    <Button onClick={handleCommentSave}>Save</Button>
+                    <Button variant={"success"} onClick={handleCommentSave}>Save</Button>
                 </div>
             )}
         </div>

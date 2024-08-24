@@ -15,7 +15,7 @@ const Consversation = ({ transcript, comments }: ConversationProps) => {
     return (
         <div>
             <Display transcript={transcript} />
-            <h1>Comments</h1>
+            <h1 className="bg-green-500" >Comments</h1>
             {comments.map((comment, index) => (
                 <Comment key={index} comment={comment} />
             ))}
