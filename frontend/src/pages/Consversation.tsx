@@ -1,0 +1,26 @@
+import Display from "@/components/Display";
+import Comment from "@/components/Comment";
+
+export type ConversationProps = {
+    transcript: string;
+    comments: {
+        comment: string;
+        fileUrl?: string;
+        id?: string;
+        file?: File | null;
+    }[];
+};
+
+const Consversation = ({ transcript, comments }: ConversationProps) => {
+    return (
+        <div>
+            <Display transcript={transcript} />
+            <h1>Comments</h1>
+            {comments.map((comment, index) => (
+                <Comment key={index} comment={comment} mode="edit" />
+            ))}
+        </div>
+    );
+};
+
+export default Consversation;
